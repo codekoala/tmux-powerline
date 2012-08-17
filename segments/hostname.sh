@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
 # Prints the hostname
-hostname -s
+echo `whoami`@`hostname -s`
 
 exit 0
