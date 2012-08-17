@@ -48,11 +48,19 @@ if [[ ${now_playing["script"]} ]]; then
 	register_segment "now_playing"
 fi
 
+declare -A io
+io+=(["script"]="${segments_path}/iostat.sh")
+io+=(["foreground"]="colour167")
+io+=(["background"]="colour237")
+io+=(["separator"]="${separator_left_bold}")
+register_segment "io"
+
 declare -A load
 load+=(["script"]="${segments_path}/load.sh")
 load+=(["foreground"]="colour167")
 load+=(["background"]="colour237")
-load+=(["separator"]="${separator_left_bold}")
+load+=(["separator"]="${separator_left_thin}")
+load+=(["separator_fg"]="default")
 register_segment "load"
 
 declare -A battery
