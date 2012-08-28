@@ -53,14 +53,15 @@ io+=(["script"]="${segments_path}/iostat.sh")
 io+=(["foreground"]="colour167")
 io+=(["background"]="colour237")
 io+=(["separator"]="${separator_left_bold}")
-register_segment "io"
+#register_segment "io"
 
 declare -A load
 load+=(["script"]="${segments_path}/load.sh")
 load+=(["foreground"]="colour167")
 load+=(["background"]="colour237")
-load+=(["separator"]="${separator_left_thin}")
-load+=(["separator_fg"]="default")
+#load+=(["separator"]="${separator_left_thin}")
+#load+=(["separator_fg"]="default")
+load+=(["separator"]="${separator_left_bold}")
 register_segment "load"
 
 declare -A battery
@@ -79,7 +80,7 @@ weather+=(["script"]="${segments_path}/weather.sh")
 weather+=(["foreground"]="colour255")
 weather+=(["background"]="colour37")
 weather+=(["separator"]="${separator_left_bold}")
-register_segment "weather"
+#register_segment "weather"
 
 declare -A xkb_layout
 if [ "$PLATFORM" == "linux" ]; then
